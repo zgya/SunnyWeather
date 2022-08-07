@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sunnyweather">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:name=".SunnyWeatherApplication"
         android:allowBackup="true"
@@ -17,6 +15,9 @@
         android:theme="@style/Theme.SunnyWeather"
         tools:targetApi="31">
         <activity
+            android:name=".ui.weather.WeatherActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,5 +27,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
